@@ -49,3 +49,7 @@ alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
 # bind ^R wie in bash
 bindkey "^R" history-incremental-search-backward
+# search through lines with the same beginning
+bindkey "^N" history-beginning-search-backward
+bindkey "^P" history-beginning-search-forward
+

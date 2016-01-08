@@ -17,10 +17,6 @@ zstyle ':vcs_info:git:*' formats '%b'
 PROMPT="%{$fg[green]%}%n@%M%{%b$reset_color%} %{$fg[blue]%}%~ %# %{%b$reset_color%}"
 RPROMPT="%{$fg[cyan]%}\$vcs_info_msg_0_%{%b$reset_color%}[%{$fg_no_bold[green]%}%?%{$reset_color%}]"
 
-# ls-colors for dark bg
-LS_COLORS='di=00;36:ln=01;36;44';
-export LS_COLORS
-
 # completion
 autoload -U compinit
 compinit

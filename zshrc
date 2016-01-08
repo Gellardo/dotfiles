@@ -34,12 +34,15 @@ setopt hist_ignore_dups
 # Prevent record in history entry if preceding them with at least one space
 setopt hist_ignore_space
 
+#tryout from grml
+setopt nobeep
+setopt noshwordsplit
+
 alias stirb='systemctl poweroff'
 alias ls='ls --color=auto --human-readable'
 alias lsl='ls --color=auto --human-readable -l'
 alias grep='grep --color=auto'
-alias sudo='sudo -E'
-alias please='sudo -E !!'
+alias sudo='sudo -E '
 alias i3lock='i3lock -i ~/Downloads/glider_wallpaper.png'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 

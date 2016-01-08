@@ -57,3 +57,8 @@ filetype plugin indent on
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
 set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,~/.vim/after
+
+
+" diable beep when doing invalid stuff (either blink or do nothing
+" set vb
+" set vb t_vb=

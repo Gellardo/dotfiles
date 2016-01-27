@@ -161,6 +161,8 @@ bar {
 	position top
 }
 
+exec ~/.fehbg
+
 for_window[title="xfce4-notifyd"] floating enable
 assign [class= "Pidgin"] 10
 assign [class= "Mumble"] 10

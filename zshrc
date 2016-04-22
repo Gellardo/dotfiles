@@ -2,7 +2,11 @@ ZDOTDIR=${ZDOTDIR:-${HOME}}
 HISTFILE="${ZDOTDIR}/.zsh_history"
 HISTSIZE='10000'
 SAVEHIST="${HISTSIZE}"
-export EDITOR='/usr/bin/vim'
+if hash nvim 2>/dev/null; then
+	export EDITOR='/usr/bin/nvim'
+else
+	export EDITOR='/usr/bin/vim'
+fi
 
 # prompt setup
 # using color names

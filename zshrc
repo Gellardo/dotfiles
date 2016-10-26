@@ -8,6 +8,8 @@ else
 	export EDITOR='/usr/bin/vim'
 fi
 
+export GOPATH="$HOME/workspace/go"
+
 # prompt setup
 # using color names
 autoload -U colors && colors

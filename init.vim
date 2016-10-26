@@ -6,9 +6,14 @@ set number
 imap jj <esc>
 
 " tab handling
-set tabstop=4
+set noexpandtab tabstop=4 softtabstop=4 shiftwidth=4 shiftround
 
 " plugins
+if empty(glob('~/.vim/autoload/plug.vim'))
+	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
 call plug#begin('~/.config/nvim/plugged')
 
     " nicer way for file system exploring
@@ -24,6 +29,11 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'bitc/vim-bad-whitespace'
 	" git integration
 	Plug 'tpope/vim-fugitive'
+
+	" julia support
+	Plug 'JuliaLang/julia-vim'
+
+	Plug 'fatih/vim-go'
 
 call plug#end()
 
@@ -46,6 +56,12 @@ let g:lightline = {
       \ },
       \}
 set noshowmode
+
+" vim-go config
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
 
 
 " colors

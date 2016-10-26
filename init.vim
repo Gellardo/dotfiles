@@ -9,11 +9,11 @@ imap jj <esc>
 set noexpandtab tabstop=4 softtabstop=4 shiftwidth=4 shiftround
 
 " plugins
-if empty(glob('~/.vim/autoload/plug.vim'))
-	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	autocmd VimEnter * PlugInstall | source $MYVIMRC
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+	silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	autocmd VimEnter * PlugInstall | source ~/.config/nvim/init.vim
 endif
+
 call plug#begin('~/.config/nvim/plugged')
 
     " nicer way for file system exploring

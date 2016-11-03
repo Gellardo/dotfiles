@@ -9,6 +9,7 @@ imap jj <esc>
 set noexpandtab tabstop=4 softtabstop=4 shiftwidth=4 shiftround
 
 " buffer handling
+set path+=** " autocomplete files from all subdirs
 set confirm " ask before leaving modified buffer whether to drop changes or save
 
 " close Omni-Completion tip window when a selection is made

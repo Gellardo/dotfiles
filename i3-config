@@ -112,11 +112,14 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
+# move workspace to output (cycles)
+bindsym $mod+x move workspace to output right
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
+# exit i3 (logs you out of your x SESSIOn)
 bindsym $mod+Shift+e exit
 
 # resize window (you can also use the mouse for that)
@@ -172,5 +175,5 @@ for_window[title="xfce4-notifyd"] floating enable
 assign [class= "Pidgin"] 10
 assign [class= "Mumble"] 10
 assign [class= "Skype"] 9
-assign [class= "Thunderbird"] 3
+assign [class= "Thunderbird"] 4
 assign [class= "Firefox"] 2

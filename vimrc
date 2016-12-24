@@ -70,6 +70,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'bitc/vim-bad-whitespace'
     " git integration
     Plug 'tpope/vim-fugitive'
+    Plug 'JuliaLang/julia-vim'
+
+	Plug 'fatih/vim-go'
 
 call plug#end()
 

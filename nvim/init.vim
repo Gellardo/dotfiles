@@ -37,7 +37,7 @@ call plug#begin('~/.config/nvim/plugged')
     " Linting and make from vim
     Plug 'benekastah/neomake'
     " colorscheme
-    Plug 'altercation/vim-colors-solarized'
+    "Plug 'altercation/vim-colors-solarized'
 
 	"nicer statusline
     Plug 'itchyny/lightline.vim'
@@ -79,4 +79,4 @@ let g:go_highlight_types = 1
 
 " colors
 set background=dark
-colorscheme solarized
+"colorscheme solarized

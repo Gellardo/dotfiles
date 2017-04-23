@@ -16,6 +16,10 @@ set confirm " ask before leaving modified buffer whether to drop changes or save
 " also possible: use CompleteDone (without if) or CursorMovedI
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
+" ft things
+let g:tex_flavor = "latex"
+autocmd FileType tex set spell
+
 
 """""""""""""""""""""""""""""""
 " plugins
@@ -42,10 +46,8 @@ call plug#begin('~/.config/nvim/plugged')
 	" git integration
 	Plug 'tpope/vim-fugitive'
 
-	" julia support
-	Plug 'JuliaLang/julia-vim'
-
 	Plug 'fatih/vim-go'
+	Plug 'lervag/vimtex'
 call plug#end()
 
 " neovim config

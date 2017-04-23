@@ -9,6 +9,8 @@ else
 fi
 
 export GOPATH="$HOME/workspace/go"
+path+=("$HOME/bin")
+export PATH
 
 # prompt setup
 # using color names
@@ -51,6 +53,7 @@ alias grep='grep --color=auto'
 alias sudo='sudo -E '
 alias i3lock='i3lock -c 000000 -i ~/Downloads/glider_wallpaper.png'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+alias vim=nvim
 
 # bind ^R wie in bash
 bindkey "^R" history-incremental-search-backward
@@ -58,3 +61,5 @@ bindkey "^R" history-incremental-search-backward
 bindkey "^N" history-beginning-search-backward
 bindkey "^P" history-beginning-search-forward
 
+# fix delete button in insert mode (bk -a for normal mode also)
+bindkey '^[[3~' delete-char

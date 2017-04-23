@@ -1,0 +1,32 @@
+#!/bin/sh
+
+set -e
+set -x
+
+BINDIR="$(pg_config --bindir)"
+PG_CTL="$BINDIR/pg_ctl"
+POSTGRES="$BINDIR/postgres"
+
+PGDATA="$(mktemp -d /tmp/pg_data.XXXXXXXXXX)"
+
+case $1 in
+tmp)
+	PGDATA="$(mktemp -d /tmp/pg_data.XXXXXXXXXX)"
+	"$PG_CTL" initdb -D "$PGDATA"
+	;;
+stop)
+	systemctl --user stop postgresql-tmp.service
+	exit 0
+	;;
+init)
+	"$PG_CTL" initdb -D "$PGDATA"
+	;;
+*)
+	;;
+esac
+
+systemd-run --user --unit "postgresql-tmp" "$POSTGRES" -D "$PGDATA" -c "unix_socket_directories=${PGDATA}" -c "listen_addresses="
+
+echo export PGHOST=$PGDATA
+echo or
+echo psql -h $PGDATA

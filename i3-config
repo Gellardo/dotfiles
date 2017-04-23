@@ -30,6 +30,11 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
 
+# i3lock
+bindsym $mod+c exec i3lock -c 000000
+
+bindsym $mod+p exec /home/frank/bin/changeScreen
+
 # functionkeys (Fn + F2-7)
 #   sound
 bindcode 121 exec amixer set Master toggle

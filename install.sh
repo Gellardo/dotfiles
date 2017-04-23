@@ -23,8 +23,7 @@ echo "Start linking files"
 
 link_home zshrc .zshrc
 link_home vimrc .vimrc
-mkdir -p $HOME/.i3
-link_home i3-config .i3/config
+link_home i3 .config/i3
 link_home i3status.conf .i3status.conf
 
 echo "Successfully done"

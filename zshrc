@@ -51,7 +51,7 @@ alias ls='ls --color=auto --human-readable'
 alias lsl='ls --color=auto --human-readable -l'
 alias grep='grep --color=auto'
 alias sudo='sudo -E '
-alias i3lock='i3lock -c 000000 -i ~/Downloads/glider_wallpaper.png'
+alias i3lock='i3lock -c 000000 -i ~/.i3lock.png -t'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias vim=nvim
 

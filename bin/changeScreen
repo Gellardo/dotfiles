@@ -12,18 +12,20 @@ EXT=$(xrandr | cut -d" " -f1 | grep VGA)
 #echo EXT is $EXT
 
 if (xrandr | grep "$EXT" | grep "+") #extern active
-    then
-    if (xrandr | grep "$IN" | grep "+") #both active
+then
+	if (xrandr | grep "$IN" | grep "+") #both active
 	then
-	xrandr --output $IN --off --output $EXT --auto
-    else
-	xrandr --output $EXT --off --output $IN --auto
-    fi
+		xrandr --output $IN --off --output $EXT --auto
+	else
+		xrandr --output $EXT --off --output $IN --auto
+	fi
 else
-        if (xrandr | grep "$EXT" | grep " connected") #intern active and extern connected
-            then
-	    xrandr --output $EXT --auto --right-of $IN
-        fi
+	if (xrandr | grep "$EXT" | grep " connected") #intern active and extern connected
+	then
+		xrandr --output $EXT --auto --right-of $IN
+	else
+		xrandr --output $EXT --off --output $IN --auto
+	fi
 fi
 
 #xrandr --output VGA1 --auto --right-of LVDS1

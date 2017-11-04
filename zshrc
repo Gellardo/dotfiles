@@ -7,6 +7,7 @@ if hash nvim 2>/dev/null; then
 else
 	export EDITOR='/usr/bin/vim'
 fi
+bindkey -e # use emacs bindings to edit lines
 
 export GOPATH="$HOME/workspace/go"
 path+=("$HOME/bin")

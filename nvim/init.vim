@@ -56,6 +56,7 @@ let g:neomake_error_sign={'text': '* ', 'texthl': 'Error'}
 let g:neomake_warning_sign={'text': '* ', 'texthl': 'Comment'}
 " run neomake on every write
 "autocmd! BufWritePost * Neomake
+nnoremap <leader>m :w<cr>:Neomake!<cr>
 
 " lightline config
 let g:lightline = {
@@ -76,6 +77,10 @@ let g:go_highlight_methods = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
 
+" vimtex config
+" fold_manual makes folds only refresh on zx bzw zX
+let g:vimtex_fold_enabled = 1
+let g:vimtex_fold_manual = 1
 
 " colors
 set background=dark

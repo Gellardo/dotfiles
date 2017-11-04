@@ -64,3 +64,7 @@ bindkey "^P" history-beginning-search-forward
 
 # fix delete button in insert mode (bk -a for normal mode also)
 bindkey '^[[3~' delete-char
+
+#start autojump if available
+[[ -e /etc/profile.d/autojump.zsh ]] && source /etc/profile.d/autojump.zsh
+
